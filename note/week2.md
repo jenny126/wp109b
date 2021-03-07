@@ -188,23 +188,25 @@ http://www.pcnet.idv.tw/pcnet/html/11.htm
 <tr>            </tr>
 ```
 ### 欄
+```html
 <td>            </td>
+```
 ## css
 ```html
 table {
-  font-family: arial, sans-serif; <!--字體-->
-  border-collapse: collapse;  <!--讓框線變成一條，而不是兩條-->
-  width: 100%;  <!--寬度-->
+  font-family: arial, sans-serif; <!-- 字體 -->
+  border-collapse: collapse;  <!-- 讓框線變成一條，而不是兩條 -->
+  width: 100%;  <!-- 寬度 -->
 }
 
 td, th {
-  border: 1px solid #dddddd;  <!--線框  線的實虛(可見文字邊框處)  邊框顏色-->
-  text-align: left;  <!--文字置左(預設置中)-->
-  padding: 8px;  <!--表格格寬-->
+  border: 1px solid #dddddd;  <!-- 線框  線的實虛(可見文字邊框處)  邊框顏色 -->
+  text-align: left;  <!-- 文字置左(預設置中) -->
+  padding: 8px;  <!-- 表格格寬 -->
 }
 
-tr:nth-child(even) {  <!--偶數列-->
-  background-color: #dddddd;  <!--表格背景色-->
+tr:nth-child(even) {  <!-- 偶數列 -->
+  background-color: #dddddd;  <!-- 表格背景色 -->
 }
 ```
 # list
@@ -221,7 +223,112 @@ tr:nth-child(even) {  <!--偶數列-->
 <ol>                        </ol>
 ```
 *更詳細:http://www.pcnet.idv.tw/pcnet/html/06.htm
-# 表單
+# block
+## div 區塊元素
 ```html
-<label for="fname">First name:</label><br>
+<div>   </div>
 ```
+## span 行內元素
+```html
+<span>  </span>
+```
+# 表單
+## 文字欄位
+```html
+<input type=text>
+```
+## 文字輸入方塊
+```html
+<textarea>
+</teatarea>
+```
+## 下拉式選項(select 內可以設定size 跟 name)
+### 單選
+```html
+<select>
+　 <option>A
+　 <option>B
+</select>
+```
+### 多選
+```html
+<select id="abc" name="ABC" multiple>
+　 <option>A
+　 <option>B
+　 <option>C
+　 <option>D
+</select>
+```
+## 多選核取方塊
+```html
+<input type=checkbox name=A> z
+<input type=checkbox name=A> x
+<input type=checkbox name=A> c
+```
+## 單選核取方塊
+```html
+<input type=radio name=B> a
+<input type=radio name=B> s
+<input type=radio name=B> d
+```
+## 按鈕
+### 執行(執行由 action 後所指定的 cgi 程式)
+```html
+<input type=submit>
+```
+### 取消(還原表單內的資料為內定值)
+```html	
+<input type=reset>
+```
+### 一般(使用者自行設計的按鈕)
+```html
+<input type=button>
+```
+## textarea(留言框)
+```html
+<textarea name="message" rows="10" cols="30">
+
+</textarea>
+```
+## datalist
+可選擇也可編輯的選項
+```html
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+```
+## Input Types
+https://www.w3schools.com/html/html_form_input_types.asp
+```html
+* <input type="button">  按鈕
+* <input type="checkbox"> 選擇框
+* <input type="color"> 顏色
+* <input type="date"> 日期
+* <input type="datetime-local"> 日期時間
+* <input type="email"> 電子郵件
+* <input type="file"> 選檔案
+* <input type="hidden"> 不顯示
+* <input type="image"> 圖片
+* <input type="month"> 月份
+* <input type="number"> 數字
+* <input type="password"> 密碼(*******)
+* <input type="radio"> 多選一
+* <input type="range"> 選範圍
+* <input type="reset"> 重設
+* <input type="search"> 搜尋 
+* <input type="submit"> 送出
+* <input type="tel"> 電話
+* <input type="text"> 文字
+* <input type="time"> 時間
+* <input type="url"> 網址
+* <input type="week"> 星期
+```
+* 提醒窗
+```html
+onclick="alert('Hello World!')"
+```
+eg:https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_button
